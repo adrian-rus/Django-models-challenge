@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid text-left">
+<h1 class="jumbotron"> This is the quotes list: </h1>
+{% block content %}
+    {%  for quote in quotes_list %}
+        <p class="text-info"><strong>Name: </strong>{{ quote.name }}</p>
+        <p class="text-info"><strong>Type: </strong>{{ quote.type }}</p>
+        <p class="text-danger"><strong>Price: </strong>{{ quote.price }}</p>
+        <hr>
+    {% endfor %}
+{% endblock %}
+</div>
+</body>
+</html>
